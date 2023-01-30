@@ -1,0 +1,1121 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Commissioner&display=swap');
+
+body{
+  width: 100%;
+  height: 100%;
+  background-color: #FAFAFA;
+}
+p{
+  padding-bottom: 20px;
+  font-family: 'Commissioner', sans-serif;
+  color: gray;
+}
+a{
+  font-family: 'Commissioner', sans-serif;
+}
+button{
+  border: none;
+}
+.modalmenu {
+  display: none;
+}
+
+
+#container{
+  display: grid;
+  grid-template-areas:
+  "header"
+  "description";
+  grid-template-columns: 1fr;
+  grid-template-rows: 50vh 1fr;
+}
+/*Occuper tout le contenue de la page*/
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+#header{
+  display: grid;
+  grid-area: header;
+  background-image: url("images/image-hero-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  color: hsl(0, 0%, 100%);
+}
+
+#description{
+  display: grid;
+  grid-area: description;
+  margin: 0px auto;
+  width: 50%;
+  height:100%;
+  background-color: #FAFAFA;
+  grid-template-rows: 200px 150px 1fr;
+  grid-template-columns: 1fr;
+  grid-row-gap: 50px;
+  border-radius: 25px;
+  
+}
+
+#header-content{
+  width: 80%;
+  margin: 0px auto;
+  display: grid;
+  grid-template-areas:
+  "logo main-menu main-menu";
+  grid-template-columns: 20vw auto 35vw;
+  grid-template-rows: 13% auto;
+}
+
+#header-logo{
+  grid-area: logo;
+  align-self:end;
+}
+
+
+#menu{
+    grid-area: main-menu;
+    align-self: end;
+    justify-self: end;
+}
+
+#menu ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+}
+
+#menu ul li{
+    text-align: right;
+    position: relative;
+    width: 10vw;
+}
+
+#menu ul li a{
+    color: hsl(0, 0%, 100%);
+    font-family: "Alata";
+    position: relative;
+    transition: all 300ms;
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 500;
+}
+
+#imghamb{
+  display: none;
+}
+
+
+#head-title{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  margin-top:-50px;
+  grid-template-areas:
+  "myimage myimage myimage"
+  "details details details"
+  "projects . bookmark";
+  text-align: center;
+  padding: 3.5%;
+  padding-top:0;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 1px 1px 6px #555;
+  z-index:1;
+}
+#myimage{
+  grid-area:myimage;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#head-title #myimage img{
+  display: flex;
+  align-self: center;
+  margin-top:-40px;
+  
+}
+
+#details{
+  grid-area: details;
+  font-family: 'Commissioner', sans-serif;
+}
+#details h2{
+  padding-bottom: 3vh;
+}
+#projects{
+  display: flex;
+  align-self: center;
+  grid-area: projects;
+}
+#projects button{
+  background-color: #3DB4AB;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+  border: none;
+  height: 7vh;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: 'Commissioner', sans-serif;
+}
+#projects button a{
+  color: white;
+
+}
+#bookmark{
+  grid-area: bookmark;
+  display: flex;
+  justify-content: flex-end;
+
+}
+#bookmark button{
+  display: flex;
+  align-self: center;
+  border-radius: 40px;
+  border: none;
+  width: 8vw;
+  
+  font-family: 'Commissioner', sans-serif;
+}
+#bookmark button a{
+  display: flex;
+  align-content: center;
+  font-size: 19px;
+  color: black;
+  height: 7vh;
+}
+#bookmark button a img{
+  padding-right: 10px;
+  
+  
+}
+
+#bookmark button a p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:0;
+  
+}
+#head-title h2{
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  
+}
+
+#statistics{
+  position: relative;
+  display: grid;
+  grid-template-areas:
+  "backed backers days"
+  "progress-bar progress-bar progress-bar";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  background-color: white;
+  border-radius: 25px;
+  padding-top: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-shadow: 1px 1px 6px #555;
+  
+
+}
+.snowbold span p{
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 700;
+  font-size:30px;
+}
+
+#backed{
+  grid-area: backed;
+  padding-left: 30px;
+
+}
+#backers{
+  grid-area:backers;
+  padding-left: 30px;
+
+}
+#days{
+  grid-area: days;
+  padding-left: 30px;
+
+}
+
+.showbold{
+  font-family: 'Commissioner', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.subtitleabout{
+  font-family: 'Commissioner', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+#about{
+  display:grid;
+  grid-template-areas:
+  "subtitleabout"
+  "paragraphabout"
+  "articles";
+  background-color: white;
+  border-radius: 25px;
+  padding: 2.5%;
+  margin: 0 auto;
+  box-shadow: 1px 1px 6px #555;
+}
+.progress-bar {
+  grid-area: progress-bar;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 1.5vh;
+  display: block;
+  margin: 1vh auto;
+  background: rgba(0,0,0,0.1);
+  border-radius: 25px;
+}
+
+.progress-bar__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: block;
+  height: 1.5vh;
+  background-color: #3DB4AB;
+  border-radius: 25px;
+  transition: 2s cubic-bezier(.57, .12, .35, 1.2);
+}
+
+#article{
+  display: grid;
+  grid-template-areas:
+  "product_name . pledge"
+  "article_desc article_desc article_desc"
+  "left_article . reward";
+  height: 200px;
+  border: 3px solid #75727236;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 10px;
+
+}
+#product_name{
+  grid-area: product_name;
+  font-family: 'Commissioner', sans-serif;
+  font-weight: bold;
+  color: #000;
+}
+#pledge{
+  grid-area: pledge;
+  font-family: 'Commissioner', sans-serif;
+  font-weight: bold;
+  color:hsl(176, 50%, 47%);
+}
+#article_desc{
+  grid-area: article_desc;
+  font-family: 'Commissioner', sans-serif;
+  color: gray;
+
+}
+#left_article{
+  grid-area: left_article;
+}
+#left_article a{
+  font-family: 'Commissioner', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+}
+#reward{
+  grid-area: reward;
+  display: flex;
+  align-self: center;
+}
+#reward button{
+  background-color: #3DB4AB;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+  border: none;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+
+/*modal section*/
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  display: grid;
+  grid-template-areas: 
+  "modal-title . close"
+  "modal-subtitle modal-subtitle modal-subtitle"
+  "order order order";
+  background-color: #fefefe;
+  margin: 10% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 20px;
+  width: 60%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  grid-area: close;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modal{
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+#modal-title{
+  grid-area:modal-title;
+  font-family: 'Commissioner', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+#modal-subtitle{
+  grid-area: modal-subtitle;
+  font-family: 'Commissioner', sans-serif;
+  color: gray;
+}
+#order{
+  grid-area:order;
+}
+.modal-order{
+  display: grid;
+  grid-template-areas:
+  "head-order modal-pledge left"
+  "pledge-desc pledge-desc pledge-desc"
+  "enter-pledge enter-pledge enter-pledge";
+  grid-template-columns: 300px 1fr 1fr;
+  height: 200px;
+  border: 3px solid #75727236;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 10px;
+
+}
+#head-order{
+  grid-area: head-order;
+  font-family: 'Commissioner', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+
+}
+#head-order:hover{
+  color: hsl(176, 50%, 47%);
+}
+#modal-pledge{
+  grid-area:  modal-pledge;
+  font-family: 'Commissioner', sans-serif;
+  font-weight: bold;
+  color:hsl(176, 50%, 47%);
+
+}
+#left{
+  grid-area: left;
+  justify-self: end;
+
+}
+#left a{
+  font-family: 'Commissioner', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+#pledge-desc{
+  grid-area: pledge-desc;
+  font-family: 'Commissioner', sans-serif;
+  color: gray;
+}
+#enter-pledge{
+  grid-area: enter-pledge;
+  display: none;
+  grid-template-areas:
+  "pledgeinput add continue";
+  grid-template-columns: 1fr 120px 100px;
+  grid-template-rows: 1fr;
+  border-top: solid #75727236;
+}
+#pledgeinput{
+  grid-area: pledgeinput;
+  align-self: center;
+  font-family: 'Commissioner', sans-serif;
+  color: gray;
+}
+#add{
+  grid-area: add;
+  align-self: center;
+  justify-self: end;
+  padding-right: 20px;
+  font-family: 'Commissioner', sans-serif;
+  color: gray;
+}
+#continue{
+  grid-area: continue;
+  align-self: center;
+  justify-self: end;
+
+}
+#continue button{
+  background-color: #3DB4AB;
+  border-radius: 20px;
+  width: 50%;
+  color: #fff;
+  text-align: center;
+  border: none;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  font-family: 'Commissioner', sans-serif;
+}
+.radio-order{
+width: 1em;
+height: 1em;
+border-radius: 50%;
+border: 0.1em solid gray;
+background-color: gray;
+}
+
+#add input{
+  width: 30px;
+  border-radius: 40%;
+  padding: 8px;
+  padding-left: 10px;
+  padding-right: 15px;
+  text-align: center;
+}
+
+#modal_completed {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+#modal_content {
+    display: grid;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 40px;
+    border: 1px solid #888;
+    border-radius: 20px;
+    width: 20%; /* Could be more or less, depending on screen size */
+    font-family: 'Commissioner', sans-serif;
+    color: gray;
+    text-align: center;
+}
+.center_title {
+    text-align: center;
+    font-family: 'Commissioner', sans-serif;
+    font-weight: bold;
+    color: black;
+}
+#gotit {
+    background-color: #3DB4AB;
+    border-radius: 50px;
+    width: 20%;
+    color: #fff;
+    text-align: center;
+    border: none;
+    padding: 10px;
+    font-family: 'Commissioner', sans-serif;
+    margin: 10% auto;
+}
+
+#gotit a {
+    color: hsl(0, 0%, 100%)
+
+}
+@media only screen and (max-width: 830px) {
+  #container{
+    display: grid;
+    grid-template-areas:
+    "header"
+    "description";
+    grid-template-columns: 1fr;
+    grid-template-rows: 40vh 1fr;
+  }
+
+  #header{
+    grid-area: header;
+    display: grid;
+    background-image: url("images/image-hero-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    color: hsl(0, 0%, 100%);
+  }
+  #description{
+    display: grid;
+    grid-area: description;
+    margin: 0px auto;
+    width: 100%;
+    height:100%;
+    background-color: #FAFAFA;
+    grid-template-rows: 200px auto 1fr;
+    grid-template-columns: 1fr;
+    grid-row-gap: 50px;
+    border-radius: 25px;
+    justify-items: center;
+  }
+  #head-title{
+    position: relative;
+    display: grid;
+    width: 90%;
+    margin-top:-50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "myimage myimage myimage"
+    "details details details"
+    "projects projects bookmark";
+    text-align: center;
+    padding: 3.5%;
+    background-color: white;
+    border-radius: 25px;
+    z-index:1;
+  }
+  #myimage{
+    grid-area:myimage;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #head-title img{
+    display: flex;
+    align-self: center;
+  }
+
+  #head-title #myimage img{
+    display: flex;
+    align-self: center;
+    margin-top:-56px;
+    
+  }
+
+  #projects{
+    display: flex;
+    align-self: center;
+    grid-area: projects;
+    justify-content:flex-end;
+  }
+  #projects button{
+    width: 95%;
+    background-color: #3DB4AB;
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    border: none;
+    height: 8vh;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: 'Commissioner', sans-serif;
+  }
+
+  #bookmark{
+    grid-area: bookmark;
+    display: flex;
+    justify-content: flex-start;
+  
+  }
+  #bookmark  button{
+    display: flex;
+    align-self: center;
+    border-radius: 40px;
+    border: none;
+    padding-left: 4vw;
+    width: 8vw;
+    height: 7vh;
+    font-family: 'Commissioner', sans-serif;
+    background-color: white;
+  }
+  #bookmark button a{
+    display: flex;
+    align-items: start;
+    align-content: start;
+    font-size: 19px;
+    color: black;
+    background-color: white;
+  }
+  #bookmark button a img{
+    padding-right: 15px;
+    
+    
+  }
+  #bookmark button a p{
+    padding:0;
+    display:none;
+  }
+  #bookmark button a{
+
+    
+  }
+
+  #details{
+    grid-area: details;
+    font-family: 'Commissioner', sans-serif;
+  }
+  #details h2{
+    font-weight: bold;
+    font-size: 26px;
+    padding-bottom: 1rem;
+  }
+  #statistics{
+    display: grid;
+    width: 90%;
+    grid-template-areas:
+    "backed"
+    "backers"
+    "days"
+    "progress-bar";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    background-color: white;
+    border-radius: 25px;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    box-shadow: 1px 1px 6px #555;
+    justify-items: center;
+    text-align: center;
+  
+  }
+  #statistics p{
+   font-size: 15px;
+  }
+  #statistics span{
+    font-size: 2rem;
+   }
+  .backed{
+    font-size:40px;
+    grid-area: backed;
+    width:100%;
+    
+  }
+  .backers{
+    grid-area:backers;
+    width:100%;
+  
+  }
+  .days{
+    grid-area: days;
+  
+  }
+  
+  .showbold{
+    font-family: 'Commissioner', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  #about{
+    position: relative;
+    background-color: white;
+    border-radius: 25px;
+    padding:2vw;
+    width: 90%;
+    box-shadow: 1px 1px 3px #555;
+  }
+  .subtitleabout{
+    font-family: 'Commissioner', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  #article{
+    display: grid;
+    grid-template-areas:
+    "product_name product_name"
+    "pledge pledge"
+    "article_desc article_desc"
+    "left_article left_article"
+    "reward .";
+    height: auto;
+    border: 3px solid #75727236;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 10px;
+  
+  }
+  #pledge{
+    grid-area: pledge;
+    font-family: 'Commissioner', sans-serif;
+    font-weight:lighter;
+    color:hsl(176, 50%, 47%);
+  }
+  #article_desc{
+    grid-area: article_desc;
+    font-family: 'Commissioner', sans-serif;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    color: gray;
+  
+  }
+  #left_article{
+    grid-area: left_article;
+    padding-bottom: 3vh;
+  }
+  #left_article a{
+    font-family: 'Commissioner', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+  }
+
+  /*modal section*/
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  display: grid;
+  grid-template-areas: 
+  "modal-title . close"
+  "modal-subtitle modal-subtitle modal-subtitle"
+  "order order order";
+  background-color: #fefefe;
+  margin: 10% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 20px;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  grid-area: close;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modal{
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+#modal-title{
+  grid-area:modal-title;
+  font-family: 'Commissioner', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+#modal-subtitle{
+  grid-area: modal-subtitle;
+  font-family: 'Commissioner', sans-serif;
+  color: gray;
+}
+.modal-order{
+  display: grid;
+  grid-template-areas:
+  "head-order"
+  "modal-pledge"
+  "pledge-desc"
+  "left"
+  "enter-pledge";
+  grid-template-columns: 1fr;
+  height: auto;
+  row-gap:20px;
+  border: 3px solid #75727236;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 10px;
+
+}
+#head-order{
+  grid-area: head-order;
+  font-family: 'Commissioner', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+
+}
+#head-order:hover{
+  color: hsl(176, 50%, 47%);
+}
+#modal-pledge{
+  grid-area:  modal-pledge;
+  font-family: 'Commissioner', sans-serif;
+  font-weight: bold;
+  color:hsl(176, 50%, 47%);
+
+}
+#left{
+  grid-area: left;
+  justify-self: start;
+
+}
+#left a{
+  font-family: 'Commissioner', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+#pledge-desc{
+  grid-area: pledge-desc;
+  font-family: 'Commissioner', sans-serif;
+  color: gray;
+}
+#enter-pledge{
+  grid-area: enter-pledge;
+  display: none;
+  grid-template-areas:
+  "pledgeinput pledgeinput pledgeinput pledgeinput"
+  "add add continue continue";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  border-top: solid #75727236;
+}
+#pledgeinput{
+  grid-area: pledgeinput;
+  align-self: center;
+  font-family: 'Commissioner', sans-serif;
+  color: gray;
+  width: 100%;
+  text-align: center;
+}
+#add{
+  grid-area: add;
+  align-self: center;
+  justify-self: end;
+  padding-right: 20px;
+  font-family: 'Commissioner', sans-serif;
+  color: gray;
+  width: 80%;
+}
+
+#continue{
+  grid-area: continue;
+  align-self: center;
+  justify-self: end;
+
+}
+#continue button{
+  background-color: #3DB4AB;
+  border-radius: 20px;
+  width: 50%;
+  color: #fff;
+  text-align: center;
+  border: none;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  font-family: 'Commissioner', sans-serif;
+}
+.radio-order{
+width: 1em;
+height: 1em;
+border-radius: 50%;
+border: 0.1em solid gray;
+background-color: gray;
+}
+
+#add input{
+  width: 80%;
+  border-radius: 20px;
+  padding: 8px;
+  padding-left: 10px;
+  padding-right: 15px;
+  text-align: center;
+}
+
+#modal_completed {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+#modal_content {
+    display: grid;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 20px;
+    width: 80%; /* Could be more or less, depending on screen size */
+    font-family: 'Commissioner', sans-serif;
+    color: gray;
+    text-align: center;
+}
+#modal_content #completed{
+  padding-bottom: 2vh;
+}
+.center_title {
+    text-align: center;
+    font-family: 'Commissioner', sans-serif;
+    font-weight: bold;
+    color: black;
+}
+#gotit {
+    background-color: #3DB4AB;
+    border-radius: 20px;
+    width: 40%;
+    color: #fff;
+    text-align: center;
+    border: none;
+    padding: 10px;
+    font-family: 'Commissioner', sans-serif;
+    margin: 10% auto;
+}
+
+#menu {
+  overflow: hidden;
+  display: flex;
+  justify-content: end;
+  z-index: 100;
+}
+
+#menu ul{
+  display: none;
+}
+
+/* The Modal (background) */
+.modalmenu {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 50px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modalmenucontent {
+  background-color: #fefefe;
+  margin: auto;
+  border-radius: 5px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.modalmenucontent a {
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+  font-weight: bold;
+  
+}
+.modalmenucontent li {
+  border-bottom: 1px solid rgb(233 233 233);
+}
+.modalmenucontent li:last-child {
+  border-bottom: 0px ;
+}
+
+.borderbottom {
+  border-bottom: 1px solid #dcdcdc;
+  width:40%;
+  margin: 0 auto;
+}
+
+.progress-bar {
+  grid-area: progress-bar;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 0.5rem;
+  display: block;
+  margin: 1vh auto;
+  background: rgba(0,0,0,0.1);
+  border-radius: 20px;
+  
+}
+.progress-bar__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 20px;
+  width: 90%;
+  display: block;
+  background-color: #3DB4AB;
+  transition: 2s cubic-bezier(.57, .12, .35, 1.2);
+}
+
+
+}
