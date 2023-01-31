@@ -1,7 +1,7 @@
 
 var received = 89914;
 
-setTimeout(progressBar(), 0);
+setTimeout(progressBar(), 4000);
 
 function progressBar() {
   var total = 100000;
@@ -10,16 +10,14 @@ function progressBar() {
   var bars = document.getElementById('progress');
   bars.setAttribute("data-percent", sum.toString());
   var dars = document.getElementsByClassName('progress-bar__slide');
-  console.log(somme);
   dars[0].style.width= somme+"%";
-
-
 };
 
 
 var modal = document.getElementById('myModal');
 var span = document.getElementsByClassName('close')[0];
 var btnMod = document.getElementsByClassName('openModal');
+
 
 span.onclick = function(){
   modal.style.display = "none";
@@ -31,8 +29,6 @@ window.onclick = function(event){
   }
 };
 
-
-/*========================================*/
 var inputData = document.getElementsByClassName('input-value');
 var modalCompleted = document.getElementById('modal_completed');
 
@@ -47,26 +43,11 @@ document.addEventListener('click', (e) => {
     let removedollars = backed.textContent.replace('$', '');
     let removecomma = removedollars.replace(',', '');
     let result = parseInt(removecomma) + parseInt(number);
-    backed.innerHTML = `${result}`;
+    backed.innerHTML = `${result.toLocaleString("en-US")}`;
     received = result;
-    /*======*/
-    let myarticles = document.getElementsByClassName("article")[index];
-    let articles = myarticles.querySelector('#left_article');
-    let article = articles.textContent;
-    let soldedarticle = article.replace(' left', '');
-    let soustraction = parseInt(soldedarticle);
-    let resultsoustraction = soustraction-1;
-    articles.innerHTML = `<a>${resultsoustraction}</a> left`
-    console.log(articles);
-    /*======*/
-    let mymodalorder = document.getElementsByClassName("modal-order")[index+1];
-    let mymodalorders = mymodalorder.querySelector('#left');
-    let mymodal = mymodalorders.textContent;
-    let modalsoldedarticle = mymodal.replace(' left', '');
-    let modalsoustraction = parseInt(modalsoldedarticle);
-    let resultsoustmodal = modalsoustraction-1;
-    mymodalorders.innerHTML = `<a>${resultsoustmodal}</a> left`
-    console.log(mymodalorders);
+    articleLeft(index);
+    modalArticleLeft(index);
+    incrementBackers();
     modal.style.display = "none";
     modalCompleted.style.display = "block";
     setTimeout(progressBar(), 0);
@@ -76,23 +57,48 @@ document.addEventListener('click', (e) => {
 
 var gotit = document.getElementById('gotit');
 gotit.onclick = function () {
-    console.log(inputData);
     modalCompleted.style.display = "none";
    
 }
 
+function articleLeft(index){
+  let myarticles = document.getElementsByClassName("article")[index];
+  let articles = myarticles.querySelector('#left_article');
+  let article = articles.textContent;
+  let soldedarticle = article.replace(' left', '');
+  let soustraction = parseInt(soldedarticle)-1;
+  articles.innerHTML = `<a>${soustraction}</a> left`
+}
+
+function incrementBackers(){
+  let backers = document.getElementsByClassName("showbold")[1];
+  let numb = backers.getElementsByTagName('span')[0];
+  let mynumber = numb.textContent;
+  let deletecomma = mynumber.replace(',', '');
+  let incrementbackers = parseInt(deletecomma)+1;
+  numb.innerHTML = `<span>${incrementbackers}</span>`
+}
+
+function modalArticleLeft(index){
+    let modalorder = document.getElementsByClassName("modal-order")[index+1];
+    let lefmodalorders = modalorder.querySelector('#left');
+    let modalvalue = lefmodalorders.textContent;
+    let removeleftarticle = modalvalue.replace(' left', '');
+    let modalsubstraction = parseInt(removeleftarticle)-1;
+    lefmodalorders.innerHTML = `<a>${modalsubstraction}</a> left`
+}
 
 var checkvalue = document.getElementsByClassName("radio-order");
 var checkmodal = document.getElementsByClassName("modal-order");
 
 
 
-function logConsole(){
+function modalOrder(){
   for (var i = 0; i < checkvalue.length; i++) {
-  if(checkvalue[i].checked == true){
-    checkmodal[i].lastElementChild.setAttribute("style","display:grid")
-    }else{
-    checkmodal[i].lastElementChild.setAttribute("style","display:none")
+  if(checkvalue[i].checked == true && checkvalue[3].checked != true ){
+    checkmodal[i].lastElementChild.setAttribute("style","display:grid");    
+  }else{
+    checkmodal[i].lastElementChild.setAttribute("style","display:none")  
   }
 }
 };
@@ -119,14 +125,10 @@ menu.addEventListener("click",function(){
 
 let myarticles = document.getElementsByClassName("article");
 for (var i = 0; i < myarticles.length; i++) {
-  console.log(myarticles[i].querySelector('#left_article'));
   let articles = myarticles[i].querySelector('#left_article');
   let article = articles.textContent;
-  console.log(article);
   let soldedarticle = article.replace(' left', '');
-  console.log(soldedarticle);
   if(parseInt(soldedarticle)==0){
-    console.log(myarticles[i]);
     myarticles[i].style.filter = "grayscale(95%)";
     let modaltodelete = document.getElementsByClassName("openModal");
     modaltodelete[i].classList.remove("openModal");
@@ -137,5 +139,6 @@ for (var i = 0; i < myarticles.length; i++) {
 for (var i = 0; i < btnMod.length; i++) {
   btnMod[i].onclick = function(){
     modal.style.display = "block";
+    checkmodal[3].style.filter = "grayscale(95%)";
   }
 };
