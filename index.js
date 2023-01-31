@@ -31,12 +31,6 @@ window.onclick = function(event){
   }
 };
 
-/*=========================================*/
-for (var i = 0; i < btnMod.length; i++) {
-  btnMod[i].onclick = function(){
-    modal.style.display = "block";
-  }
-};
 
 /*========================================*/
 var inputData = document.getElementsByClassName('input-value');
@@ -55,6 +49,16 @@ document.addEventListener('click', (e) => {
     let result = parseInt(removecomma) + parseInt(number);
     backed.innerHTML = `${result}`;
     received = result;
+    let myarticles = document.getElementsByClassName("article")[index];
+    let articles = myarticles.querySelector('#left_article');
+    let article = articles.textContent;
+    let soldedarticle = article.replace(' left', '');
+    let soustraction = parseInt(soldedarticle);
+    let resultsoustraction = soustraction-1;
+    articles.innerHTML = `<a>${resultsoustraction}</a> left`
+    console.log(articles);
+    modal.style.display = "none";
+    modalCompleted.style.display = "block";
     setTimeout(progressBar(), 0);
   }
 });
@@ -103,3 +107,25 @@ menu.addEventListener("click",function(){
   }
 })
 
+let myarticles = document.getElementsByClassName("article");
+for (var i = 0; i < myarticles.length; i++) {
+  console.log(myarticles[i].querySelector('#left_article'));
+  let articles = myarticles[i].querySelector('#left_article');
+  let article = articles.textContent;
+  console.log(article);
+  let soldedarticle = article.replace(' left', '');
+  console.log(soldedarticle);
+  if(parseInt(soldedarticle)==0){
+    console.log(myarticles[i]);
+    myarticles[i].style.filter = "grayscale(95%)";
+    let modaltodelete = document.getElementsByClassName("openModal");
+    modaltodelete[i].classList.remove("openModal");
+  }
+}
+
+/*=========================================*/
+for (var i = 0; i < btnMod.length; i++) {
+  btnMod[i].onclick = function(){
+    modal.style.display = "block";
+  }
+};

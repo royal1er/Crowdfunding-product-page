@@ -36,7 +36,6 @@ button{
     padding: 0px;
     list-style: none;
     text-decoration: none;
-    font-size: 18px;
 }
 
 
@@ -86,18 +85,20 @@ button{
     grid-area: main-menu;
     align-self: end;
     justify-self: end;
+    width: 50%;
 }
 
 #menu ul{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: 100%;
+    width: 80%;
+    float: right;
 }
 
 #menu ul li{
-    text-align: right;
+    text-align: left;
     position: relative;
-    width: 10vw;
+    width: 100%;
 }
 
 #menu ul li a{
@@ -117,7 +118,7 @@ button{
 #head-title{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
+  grid-template-rows: auto auto 7vh;
   margin-top:-50px;
   grid-template-areas:
   "myimage myimage myimage"
@@ -127,7 +128,7 @@ button{
   padding: 3.5%;
   padding-top:0;
   background-color: white;
-  border-radius: 25px;
+  border-radius: 10px;
   box-shadow: 1px 1px 6px #555;
   z-index:1;
 }
@@ -136,13 +137,12 @@ button{
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
 
 #head-title #myimage img{
   display: flex;
-  align-self: center;
-  margin-top:-40px;
-  
+  margin-top: -23px;  
 }
 
 #details{
@@ -156,6 +156,8 @@ button{
   display: flex;
   align-self: center;
   grid-area: projects;
+  height: 100%;
+  width: 100%;
 }
 #projects button{
   background-color: #3DB4AB;
@@ -164,13 +166,24 @@ button{
   text-align: center;
   border: none;
   height: 7vh;
-  padding: 10px;
+  height: 100%;
+  width: 100%;
+  padding: 1vh;
   padding-left: 15px;
   padding-right: 15px;
   font-family: 'Commissioner', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #projects button a{
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 3vmin;
 
 }
 #bookmark{
@@ -182,10 +195,11 @@ button{
 #bookmark button{
   display: flex;
   align-self: center;
+  align-items: center;
   border-radius: 40px;
   border: none;
-  width: 8vw;
-  
+  height: 100%;
+  width: 100%;
   font-family: 'Commissioner', sans-serif;
 }
 #bookmark button a{
@@ -193,11 +207,13 @@ button{
   align-content: center;
   font-size: 19px;
   color: black;
-  height: 7vh;
+  height: 100%;
+  width: 100%;
 }
 #bookmark button a img{
-  padding-right: 10px;
-  
+  width: 25%;
+  height: 100%;
+  z-index: 0;
   
 }
 
@@ -206,6 +222,9 @@ button{
   justify-content: center;
   align-items: center;
   padding:0;
+  width: 100%;
+  font-size: 3vmin;
+  justify-content: center;justify-content: center;
   
 }
 #head-title h2{
@@ -219,12 +238,12 @@ button{
   position: relative;
   display: grid;
   grid-template-areas:
-  "backed backers days"
-  "progress-bar progress-bar progress-bar";
-  grid-template-columns: 1fr 1fr 1fr;
+  "backed borderright1 backers borderright2 days"
+  "progress-bar progress-bar progress-bar progress-bar progress-bar";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   background-color: white;
-  border-radius: 25px;
+  border-radius: 10px;
   padding-top: 25px;
   padding-left: 50px;
   padding-right: 50px;
@@ -232,10 +251,15 @@ button{
   
 
 }
-.snowbold span p{
-  font-family: 'Commissioner', sans-serif;
-  font-weight: 700;
-  font-size:30px;
+.borderright1{
+  grid-area:borderright1;
+  border-right: 1px solid #dcdcdc;
+  margin: 0 auto;
+}
+.borderright2{
+  grid-area:borderright2;
+  border-right: 1px solid #dcdcdc;
+  margin: 0 auto;
 }
 
 #backed{
@@ -256,7 +280,7 @@ button{
 
 .showbold{
   font-family: 'Commissioner', sans-serif;
-  font-size: 25px;
+  font-size: 2.5em;
   font-weight: bold;
 }
 
@@ -273,7 +297,7 @@ button{
   "paragraphabout"
   "articles";
   background-color: white;
-  border-radius: 25px;
+  border-radius: 10px;
   padding: 2.5%;
   margin: 0 auto;
   box-shadow: 1px 1px 6px #555;
@@ -302,7 +326,7 @@ button{
   transition: 2s cubic-bezier(.57, .12, .35, 1.2);
 }
 
-#article{
+.article{
   display: grid;
   grid-template-areas:
   "product_name . pledge"
@@ -576,7 +600,7 @@ background-color: gray;
     color: hsl(0, 0%, 100%)
 
 }
-@media only screen and (max-width: 830px) {
+@media only screen and (max-width: 950px) {
   #container{
     display: grid;
     grid-template-areas:
@@ -615,23 +639,18 @@ background-color: gray;
     display: grid;
     width: 90%;
     margin-top:-50px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 18vw;
+    grid-template-rows: auto auto 25%;
     grid-template-areas:
     "myimage myimage myimage"
     "details details details"
     "projects projects bookmark";
     text-align: center;
     padding: 3.5%;
+    padding-top:0;
     background-color: white;
-    border-radius: 25px;
+    border-radius: 10px;
     z-index:1;
-  }
-  #myimage{
-    grid-area:myimage;
-    width: 100%;
-    display: flex;
-    justify-content: center;
   }
 
   #head-title img{
@@ -639,30 +658,31 @@ background-color: gray;
     align-self: center;
   }
 
-  #head-title #myimage img{
-    display: flex;
-    align-self: center;
-    margin-top:-56px;
-    
-  }
-
   #projects{
     display: flex;
     align-self: center;
     grid-area: projects;
     justify-content:flex-end;
+    height: 100%;
+    width: 100%;
   }
   #projects button{
-    width: 95%;
     background-color: #3DB4AB;
     border-radius: 20px;
     color: #fff;
     text-align: center;
     border: none;
-    height: 8vh;
-    padding-left: 15px;
-    padding-right: 15px;
+    height: 100%;
+    width: 100%;
+    padding:0.5vh;
     font-family: 'Commissioner', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #projects button a{
+    display: flex;
+    font-size: 1em;
   }
 
   #bookmark{
@@ -673,12 +693,12 @@ background-color: gray;
   }
   #bookmark  button{
     display: flex;
-    align-self: center;
+    align-items: center;
     border-radius: 40px;
     border: none;
     padding-left: 4vw;
-    width: 8vw;
-    height: 7vh;
+    height: 100%;
+    width: 100%;
     font-family: 'Commissioner', sans-serif;
     background-color: white;
   }
@@ -688,10 +708,13 @@ background-color: gray;
     align-content: start;
     font-size: 19px;
     color: black;
+    height: 100%;
+    width: 100%;
     background-color: white;
   }
   #bookmark button a img{
     padding-right: 15px;
+    width: 100%;
     
     
   }
@@ -721,10 +744,10 @@ background-color: gray;
     "backers"
     "days"
     "progress-bar";
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     background-color: white;
-    border-radius: 25px;
+    border-radius: 10px;
     padding-top: 2vh;
     padding-bottom: 2vh;
     padding-left: 2vw;
@@ -734,6 +757,15 @@ background-color: gray;
     text-align: center;
   
   }
+
+  .borderright1{
+    display: none;
+  }
+  .borderright2{
+    display: none;
+  }
+
+
   #statistics p{
    font-size: 15px;
   }
@@ -776,7 +808,7 @@ background-color: gray;
     padding-top: 40px;
     padding-bottom: 20px;
   }
-  #article{
+  .article{
     display: grid;
     grid-template-areas:
     "product_name product_name"
@@ -1117,5 +1149,9 @@ background-color: gray;
   transition: 2s cubic-bezier(.57, .12, .35, 1.2);
 }
 
-
+@media only screen and (max-width: 300px) {
+  #head-title{
+    grid-template-rows: auto auto auto;
+  }
+}
 }
