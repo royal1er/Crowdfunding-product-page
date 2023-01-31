@@ -49,6 +49,7 @@ document.addEventListener('click', (e) => {
     let result = parseInt(removecomma) + parseInt(number);
     backed.innerHTML = `${result}`;
     received = result;
+    /*======*/
     let myarticles = document.getElementsByClassName("article")[index];
     let articles = myarticles.querySelector('#left_article');
     let article = articles.textContent;
@@ -57,6 +58,15 @@ document.addEventListener('click', (e) => {
     let resultsoustraction = soustraction-1;
     articles.innerHTML = `<a>${resultsoustraction}</a> left`
     console.log(articles);
+    /*======*/
+    let mymodalorder = document.getElementsByClassName("modal-order")[index+1];
+    let mymodalorders = mymodalorder.querySelector('#left');
+    let mymodal = mymodalorders.textContent;
+    let modalsoldedarticle = mymodal.replace(' left', '');
+    let modalsoustraction = parseInt(modalsoldedarticle);
+    let resultsoustmodal = modalsoustraction-1;
+    mymodalorders.innerHTML = `<a>${resultsoustmodal}</a> left`
+    console.log(mymodalorders);
     modal.style.display = "none";
     modalCompleted.style.display = "block";
     setTimeout(progressBar(), 0);
