@@ -6,7 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 <link rel="stylesheet" href="./style.css">
-<script type="text/javascript" src="index.js" defer></script>
+<script  src="index.js" defer></script>
   <title>Frontend Mentor | Crowdfunding product page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -16,7 +16,7 @@
   </style>
 </head>
 <body>
-  <section id="container">
+  <div id="container">
     <!-- en tête -->
     <header id="header">
       <div id="header-content">
@@ -47,10 +47,10 @@
 
         </div>
         <div id="projects">
-        <button type="button" name="button"><a href="#">Back this project</a></button>
+        <button id="projectbutton" type="button" name="button">Back this project</button>
         </div>
         <div id="bookmark">
-          <button type="button" name="button"><a href="#"><img src="./images/icon-bookmark.svg  " alt=""><p>Bookmark</p></a></button>
+          <button id="bookmarktbutton" type="button" name="button"><img src="./images/icon-bookmark.svg  " alt=""><span>Bookmark</span></button>
         </div>
       </div>
       <div id="statistics">
@@ -95,59 +95,59 @@
                 
                 <div id="articles">
                 <div class="article">
-                  <div id="product_name">
+                  <div class="product_name">
                     Bamboo Stand
                   </div>
-                <div id="pledge">
+                <div class="pledge">
                   Pledge $25 or more
                 </div>
-                <div id="article_desc">
+                <div class="article_desc">
                   You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
                     you’ll be added to a special Backer member list.
                 </div>
-                <div id="left_article">
+                <div class="left_article">
                   <a>101</a> left
                 </div>
-                <div id="reward">
+                <div class="reward">
                   <button class="openModal" type="button" name="button">Select Reward</button>
                 </div>
                 </div>
 
                 <div class="article">
-                  <div id="product_name">
+                  <div class="product_name">
                     Black Edition Stand
                   </div>
-                  <div id="pledge">
+                  <div class="pledge">
                     Pledge $75 or more
                   </div>
-                  <div id="article_desc">
+                  <div class="article_desc">
                     You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
                     member list. Shipping is included.
                   </div>
-                  <div id="left_article">
+                  <div class="left_article">
                     <a>64</a> left
                   </div>
-                  <div id="reward">
+                  <div class="reward">
                     <button class="openModal" type="button" name="button">Select Reward</button>
                   </div>
                 </div>
 
 
                 <div class="article">
-                  <div id="product_name">
+                  <div class="product_name">
                     Mahogany Special Edition
                   </div>
-                  <div id="pledge">
+                  <div class="pledge">
                     Pledge $200 or more
                   </div>
-                  <div id="article_desc">
+                  <div class="article_desc">
                     You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
                     to our Backer member list. Shipping is included.
                   </div>
-                  <div id="left_article">
+                  <div class="left_article">
                     <a>0</a> left
                   </div>
-                  <div id="reward">
+                  <div class="reward">
                     <button class="openModal" type="button" name="button">Out of stock</button>
                   </div>
                 </div>
@@ -166,61 +166,61 @@
                     <div id="order">
                         <!-- Selected pledge start -->
                         <div class="modal-order">
-                            <div id="head-order">
+                            <div class="head-order">
                                 <input type="radio" class="radio-order" name="noreward" value="noreward_selected" onClick="modalOrder()">
                                 Pledge with no reward
                             </div>
-                            <div id="modal-pledge">
+                            <div class="modal-pledge">
                             </div>
-                            <div id="left">
+                            <div class="left">
 
                             </div>
-                            <div id="pledge-desc">
+                            <div class="pledge-desc">
                                 <p>
                                     Choose to support us without a reward if you simply believe in our project. As a backer,
                                     you will be signed up to receive product updates via email.
                                 </p>
                             </div>
-                            <div id="enter-pledge">
+                            <div class="enter-pledge">
 
-                                <div id="pledgeinput">
+                                <div class="pledgeinput">
 
                                 </div>
-                                <div id="add">
+                                <div class="add">
                                 </div>
-                                <div id="continue">
+                                <div class="continue">
                                 </div>
                                 <!-- Selected pledge end -->
                             </div>
                         </div>
                         <!-- Selected pledge start -->
                         <div class="modal-order">
-                            <div id="head-order">
+                            <div class="head-order">
                                 <input type="radio" class="radio-order" name="noreward" value="noreward_selected" onClick="modalOrder()">
                                 Bamboo Stand
                             </div>
-                            <div id="modal-pledge">
+                            <div class="modal-pledge">
                                 Pledge $25 or more
                             </div>
-                            <div id="left">
+                            <div class="left">
                                 <a>101</a> left
                             </div>
 
-                            <div id="pledge-desc">
+                            <div class="pledge-desc">
                                 <p>
                                     You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
                                     you’ll be added to a special Backer member list.
                                 </p>
                             </div>
-                            <div id="enter-pledge">
+                            <div class="enter-pledge">
 
-                                <div id="pledgeinput">
+                                <div class="pledgeinput">
                                     Enter your pledge
                                 </div>
-                                <div id="add">
+                                <div class="add">
                                     <input class="input-value" type="text" name="inputOrder" value="$25">
                                 </div>
-                                <div id="continue">
+                                <div class="continue">
                                     <button type="button" class="confirmData">Continue</button>
                                 </div>
                                 <!-- Selected pledge end -->
@@ -229,31 +229,31 @@
                         </div>
                         <!-- Selected pledge start -->
                         <div class="modal-order">
-                            <div id="head-order">
+                            <div class="head-order">
                                 <input type="radio" class="radio-order" name="noreward" value="noreward_selected" onClick="modalOrder()">
                                 Black Edition Stand
                             </div>
-                            <div id="modal-pledge">
+                            <div class="modal-pledge">
                                 Pledge $75 or more
                             </div>
-                            <div id="left">
+                            <div class="left">
                                 <a>64</a> left
                             </div>
-                            <div id="pledge-desc">
+                            <div class="pledge-desc">
                                 <p>
                                     You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
                                     member list. Shipping is included.
                                 </p>
                             </div>
-                            <div id="enter-pledge">
+                            <div class="enter-pledge">
 
-                                <div id="pledgeinput">
+                                <div class="pledgeinput">
                                     Enter your pledge
                                 </div>
                                 <div id="add">
                                     <input class="input-value" type="text" name="inputOrder" value="$75">
                                 </div>
-                                <div id="continue">
+                                <div class="continue">
                                     <button type="button" class="confirmData">Continue</button>
                                 </div>
                                 <!-- Selected pledge end -->
@@ -261,31 +261,31 @@
                         </div>
                         <!-- Selected pledge start -->
                         <div class="modal-order">
-                            <div id="head-order">
+                            <div class="head-order">
                                 <input type="radio" class="radio-order" name="noreward" value="noreward_selected" onClick="modalOrder()">
                                 Mahogany Special Edition
                             </div>
-                            <div id="modal-pledge">
+                            <div class="modal-pledge">
                                 Pledge $200 or more
                             </div>
-                            <div id="left">
+                            <div class="left">
                                 <a>0</a> left
                             </div>
-                            <div id="pledge-desc">
+                            <div class="pledge-desc">
                                 <p>
                                     You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
                                     to our Backer member list. Shipping is included.
                                 </p>
                             </div>
-                            <div id="enter-pledge">
+                            <div class="enter-pledge">
 
-                                <div id="pledgeinput">
+                                <div class="pledgeinput">
                                     Enter your pledge
                                 </div>
-                                <div id="add">
+                                <div class="add">
                                     <input class="input-value" type="text" name="inputOrder" value="$200">
                                 </div>
-                                <div id="continue">
+                                <div class="continue">
                                     <button type="button" class="confirmData">Continue</button>
                                 </div>
                                 <!-- Selected pledge end -->
@@ -329,7 +329,7 @@
         </ul>
       </div>
     </div>
-  </section>
+  </div>
 
 </body>
 </html>

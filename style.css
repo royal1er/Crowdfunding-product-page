@@ -11,6 +11,9 @@ p{
   font-family: 'Commissioner', sans-serif;
   color: gray;
 }
+button{
+  cursor: pointer;
+}
 a{
   font-family: 'Commissioner', sans-serif;
 }
@@ -165,10 +168,10 @@ button{
   color: #fff;
   text-align: center;
   border: none;
-  height: 7vh;
   height: 100%;
   width: 100%;
   padding: 1vh;
+  font-size: 3vmin;
   padding-left: 15px;
   padding-right: 15px;
   font-family: 'Commissioner', sans-serif;
@@ -176,16 +179,7 @@ button{
   justify-content: center;
   align-items: center;
 }
-#projects button a{
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  font-size: 3vmin;
 
-}
 #bookmark{
   grid-area: bookmark;
   display: flex;
@@ -194,37 +188,28 @@ button{
 }
 #bookmark button{
   display: flex;
-  align-self: center;
   align-items: center;
   border-radius: 40px;
+  font-size: 3vmin;
+  color: black;
   border: none;
   height: 100%;
   width: 100%;
   font-family: 'Commissioner', sans-serif;
 }
-#bookmark button a{
-  display: flex;
-  align-content: center;
-  font-size: 19px;
-  color: black;
-  height: 100%;
-  width: 100%;
-}
-#bookmark button a img{
-  width: 25%;
-  height: 100%;
-  z-index: 0;
-  
+
+#bookmark button img{
+  max-height: 100%;
 }
 
-#bookmark button a p{
+#bookmark button span{
   display: flex;
-  justify-content: center;
   align-items: center;
   padding:0;
   width: 100%;
   font-size: 3vmin;
-  justify-content: center;justify-content: center;
+  justify-content: center;
+  justify-items: center;
   
 }
 #head-title h2{
@@ -339,38 +324,38 @@ button{
   padding: 10px;
 
 }
-#product_name{
+.product_name{
   grid-area: product_name;
   font-family: 'Commissioner', sans-serif;
   font-weight: bold;
   color: #000;
 }
-#pledge{
+.pledge{
   grid-area: pledge;
   font-family: 'Commissioner', sans-serif;
   font-weight: bold;
   color:hsl(176, 50%, 47%);
 }
-#article_desc{
+.article_desc{
   grid-area: article_desc;
   font-family: 'Commissioner', sans-serif;
   color: gray;
 
 }
-#left_article{
+.left_article{
   grid-area: left_article;
 }
-#left_article a{
+.left_article a{
   font-family: 'Commissioner', sans-serif;
   font-weight: bold;
   font-size: 25px;
 }
-#reward{
+.reward{
   grid-area: reward;
   display: flex;
   align-self: center;
 }
-#reward button{
+.reward button{
   background-color: #3DB4AB;
   border-radius: 20px;
   color: #fff;
@@ -462,17 +447,17 @@ button{
   padding: 10px;
 
 }
-#head-order{
+.head-order{
   grid-area: head-order;
   font-family: 'Commissioner', sans-serif;
   font-weight: bold;
   font-size: 20px;
 
 }
-#head-order:hover{
+.head-order:hover{
   color: hsl(176, 50%, 47%);
 }
-#modal-pledge{
+.modal-pledge{
   grid-area:  modal-pledge;
   font-family: 'Commissioner', sans-serif;
   font-weight: bold;
@@ -489,12 +474,12 @@ button{
   font-weight: bold;
   font-size: 20px;
 }
-#pledge-desc{
+.pledge-desc{
   grid-area: pledge-desc;
   font-family: 'Commissioner', sans-serif;
   color: gray;
 }
-#enter-pledge{
+.enter-pledge{
   grid-area: enter-pledge;
   display: none;
   grid-template-areas:
@@ -503,13 +488,13 @@ button{
   grid-template-rows: 1fr;
   border-top: solid #75727236;
 }
-#pledgeinput{
+.pledgeinput{
   grid-area: pledgeinput;
   align-self: center;
   font-family: 'Commissioner', sans-serif;
   color: gray;
 }
-#add{
+.add{
   grid-area: add;
   align-self: center;
   justify-self: end;
@@ -517,13 +502,13 @@ button{
   font-family: 'Commissioner', sans-serif;
   color: gray;
 }
-#continue{
+.continue{
   grid-area: continue;
   align-self: center;
   justify-self: end;
 
 }
-#continue button{
+.continue button{
   background-color: #3DB4AB;
   border-radius: 20px;
   width: 50%;
@@ -544,7 +529,7 @@ border: 0.1em solid gray;
 background-color: gray;
 }
 
-#add input{
+.add input{
   width: 30px;
   border-radius: 40%;
   padding: 8px;
@@ -702,30 +687,18 @@ background-color: gray;
     font-family: 'Commissioner', sans-serif;
     background-color: white;
   }
-  #bookmark button a{
-    display: flex;
-    align-items: start;
-    align-content: start;
-    font-size: 19px;
-    color: black;
-    height: 100%;
+
+  #bookmark button img{
+    max-height: 100%;
+    padding-right: 1vw;
     width: 100%;
-    background-color: white;
-  }
-  #bookmark button a img{
-    padding-right: 15px;
-    width: 100%;
-    
-    
-  }
-  #bookmark button a p{
+
+}
+  #bookmark button span{
     padding:0;
     display:none;
   }
-  #bookmark button a{
 
-    
-  }
 
   #details{
     grid-area: details;
@@ -823,13 +796,13 @@ background-color: gray;
     padding: 10px;
   
   }
-  #pledge{
+  .pledge{
     grid-area: pledge;
     font-family: 'Commissioner', sans-serif;
     font-weight:lighter;
     color:hsl(176, 50%, 47%);
   }
-  #article_desc{
+  .article_desc{
     grid-area: article_desc;
     font-family: 'Commissioner', sans-serif;
     padding-top: 5vh;
@@ -837,11 +810,11 @@ background-color: gray;
     color: gray;
   
   }
-  #left_article{
+  .left_article{
     grid-area: left_article;
     padding-bottom: 3vh;
   }
-  #left_article a{
+  .left_article a{
     font-family: 'Commissioner', sans-serif;
     font-weight: bold;
     font-size: 2em;
@@ -927,17 +900,17 @@ background-color: gray;
   padding: 10px;
 
 }
-#head-order{
+.head-order{
   grid-area: head-order;
   font-family: 'Commissioner', sans-serif;
   font-weight: bold;
   font-size: 20px;
 
 }
-#head-order:hover{
+.head-order:hover{
   color: hsl(176, 50%, 47%);
 }
-#modal-pledge{
+.modal-pledge{
   grid-area:  modal-pledge;
   font-family: 'Commissioner', sans-serif;
   font-weight: bold;
@@ -954,12 +927,12 @@ background-color: gray;
   font-weight: bold;
   font-size: 20px;
 }
-#pledge-desc{
+.pledge-desc{
   grid-area: pledge-desc;
   font-family: 'Commissioner', sans-serif;
   color: gray;
 }
-#enter-pledge{
+.enter-pledge{
   grid-area: enter-pledge;
   display: none;
   grid-template-areas:
@@ -969,7 +942,7 @@ background-color: gray;
   grid-template-rows: 1fr 1fr;
   border-top: solid #75727236;
 }
-#pledgeinput{
+.pledgeinput{
   grid-area: pledgeinput;
   align-self: center;
   font-family: 'Commissioner', sans-serif;
@@ -977,7 +950,7 @@ background-color: gray;
   width: 100%;
   text-align: center;
 }
-#add{
+.add{
   grid-area: add;
   align-self: center;
   justify-self: end;
@@ -987,13 +960,13 @@ background-color: gray;
   width: 80%;
 }
 
-#continue{
+.continue{
   grid-area: continue;
   align-self: center;
   justify-self: end;
 
 }
-#continue button{
+.continue button{
   background-color: #3DB4AB;
   border-radius: 20px;
   width: 50%;
@@ -1014,7 +987,7 @@ border: 0.1em solid gray;
 background-color: gray;
 }
 
-#add input{
+.add input{
   width: 80%;
   border-radius: 20px;
   padding: 8px;

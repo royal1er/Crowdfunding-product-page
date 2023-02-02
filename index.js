@@ -63,7 +63,7 @@ gotit.onclick = function () {
 
 function articleLeft(index){
   let myarticles = document.getElementsByClassName("article")[index];
-  let articles = myarticles.querySelector('#left_article');
+  let articles = myarticles.querySelector('.left_article');
   let article = articles.textContent;
   let soldedarticle = article.replace(' left', '');
   let soustraction = parseInt(soldedarticle)-1;
@@ -81,7 +81,7 @@ function incrementBackers(){
 
 function modalArticleLeft(index){
     let modalorder = document.getElementsByClassName("modal-order")[index+1];
-    let lefmodalorders = modalorder.querySelector('#left');
+    let lefmodalorders = modalorder.querySelector('.left');
     let modalvalue = lefmodalorders.textContent;
     let removeleftarticle = modalvalue.replace(' left', '');
     let modalsubstraction = parseInt(removeleftarticle)-1;
@@ -125,7 +125,7 @@ menu.addEventListener("click",function(){
 
 let myarticles = document.getElementsByClassName("article");
 for (var i = 0; i < myarticles.length; i++) {
-  let articles = myarticles[i].querySelector('#left_article');
+  let articles = myarticles[i].querySelector('.left_article');
   let article = articles.textContent;
   let soldedarticle = article.replace(' left', '');
   if(parseInt(soldedarticle)==0){
@@ -142,3 +142,10 @@ for (var i = 0; i < btnMod.length; i++) {
     checkmodal[3].style.filter = "grayscale(95%)";
   }
 };
+
+let projectbutton = document.getElementById("projectbutton");
+
+projectbutton.addEventListener('click', (e) => {
+  modal.style.display = "block";
+
+})
