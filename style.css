@@ -31,7 +31,7 @@ button{
   "header"
   "description";
   grid-template-columns: 1fr;
-  grid-template-rows: 55vh 1fr;
+  grid-template-rows: 50vh 1fr;
 }
 /*Occuper tout le contenue de la page*/
 * {
@@ -171,7 +171,7 @@ button{
   height: 100%;
   width: 100%;
   padding: 1vh;
-  font-size: 3vmin;
+  font-size: 1rem;
   padding-left: 15px;
   padding-right: 15px;
   font-family: 'Commissioner', sans-serif;
@@ -190,7 +190,6 @@ button{
   display: flex;
   align-items: center;
   border-radius: 40px;
-  font-size: 3vmin;
   color: black;
   border: none;
   height: 100%;
@@ -207,7 +206,7 @@ button{
   align-items: center;
   padding:0;
   width: 100%;
-  font-size: 3vmin;
+  font-size: 1rem;
   justify-content: center;
   justify-items: center;
   
@@ -660,11 +659,9 @@ background-color: gray;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  #projects button a{
-    display: flex;
     font-size: 1em;
   }
+
 
   #bookmark{
     grid-area: bookmark;
